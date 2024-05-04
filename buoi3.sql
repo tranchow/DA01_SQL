@@ -31,3 +31,31 @@ SELECT name FROM Employee
 WHERE salary > 2000 
 AND months < 10
 ORDER BY employee_id ASC;
+---ex9
+SELECT product_id FROM Products
+WHERE low_fats='Y' AND recyclable='Y'
+---ex10
+SELECT name FROM Customer
+WHERE referee_id <> 2 OR referee_id IS NULL;
+---ex11
+SELECT name, population, area
+FROM World
+WHERE area >= 3000000 
+OR population >= 25000000;
+---ex12
+SELECT distinct author_id as id
+FROM Views
+WHERE author_id = viewer_id
+order by author_id asc;
+---ex13
+SELECT part, assembly_step 
+FROM parts_assembly
+WHERE finish_date IS NULL;
+---ex14
+select * from lyft_drivers
+where yearly_salary <= 30000
+or yearly_salary >= 70000;
+---ex15
+select * from uber_advertising
+where money_spent > 100000
+and year = 2019;
