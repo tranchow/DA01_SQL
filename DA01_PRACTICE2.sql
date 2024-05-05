@@ -47,3 +47,9 @@ FROM Cinema
 WHERE NOT(description='boring') 
 AND id%2=1
 ORDER BY rating DESC
+--- EX 10
+SELECT  distinct teacher_id,
+COUNT(distinct subject_id) AS cnt
+FROM Teacher
+GROUP BY teacher_id;
+
