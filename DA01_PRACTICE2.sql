@@ -52,4 +52,14 @@ SELECT  distinct teacher_id,
 COUNT(distinct subject_id) AS cnt
 FROM Teacher
 GROUP BY teacher_id;
+---EX11
+SELECT user_id,
+COUNT(follower_id) AS followers_count
+FROM Followers
+GROUP BY user_id;
+---EX12
+SELECT class
+FROM Courses
+GROUP BY class
+HAVING COUNT(student) >= 5;
 
